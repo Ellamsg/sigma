@@ -48,10 +48,15 @@ const Homepage = () => {
             </div>
         </div>
       </div>
+      
+      <div className="">
+        <img className="w-full" src="/images/woman-coat.png"/>
+      </div>
       <Ads/>
       <div className="text-center p-3 border-t-2 border-b-2 border-black font-semibold">
         <p>BACK TO TOP</p>
       </div>
+
     </div>
   );
 };
