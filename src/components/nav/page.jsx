@@ -3,7 +3,7 @@ import Link from "next/link";
 const Nav = () => {
   return (
     <div className="text-center">
-      <div className="bg-black text-[12px] justify-between flex text-white p-4">
+      <div className="bg-black overflow-y-auto text-[12px] justify-between flex text-white p-3">
         <div className="banner ">
           <p>FRESS SHIPPING WORLDWIDE BY DHL</p>
           <p>|</p>
@@ -30,16 +30,16 @@ const Nav = () => {
       <div className="border-black flex justify-between border-2">
 
         <div className="border-red-500 flex ">
-          <p className="px-5 py-3">KING SIGMA</p>
-          <p className="border-l border-r px-5 py-3 border-black">SHOP</p>
+          <p className="px-5 py-2">KING SIGMA</p>
+          <p className="border-l border-r px-5 py-2 border-black">SHOP</p>
         </div>
 
   
         <div className="border-red-500 flex ">
-        <p className="border-l px-5 py-3  border-black">SHOP</p>
-        <p className="border-l px-5 py-3 border-black">SHOP</p>
-        <p className="border-l px-5 py-3 border-black">SHOP</p>
-          <p className="border-l px-5 py-3 border-black">SHOP</p>
+        <p className="border-l px-5 py-2  border-black">SHOP</p>
+        <p className="border-l px-5 py-2 border-black">SHOP</p>
+        <p className="border-l px-5 py-2 border-black">SHOP</p>
+          <p className="border-l px-5 py-2 border-black">SHOP</p>
         </div>
       </div>
     </div>

@@ -14,3 +14,9 @@
 
   @apply flex gap-3 ;
 }
+
+.banner-btn{
+
+  @apply border-black border-[1.7px] px-7 py-[6px];
+
+}
