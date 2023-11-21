@@ -20,3 +20,9 @@
   @apply border-black border-[1.7px] px-7 py-[6px];
 
 }
+
+.subscribe{
+ @apply bg-black h-6 text-white;
+
+}
+
