@@ -1,9 +1,11 @@
 const Footer = () => {
   return (
-    <div className="flex">
-      <div className="flex p-6 w-[100%] lg:flex-row justify-between flex-col bg-red">
+    <div>
+       
+    <div className="flex ">
+      <div className="flex p-6 w-[100%] lg:flex-row justify-between flex-col ">
         <div className="">
-          <p>Terms of use</p>
+          <p className="footer-text" >Terms of use</p>
           <p>Terms of use</p>
           <p>Terms of use</p>
           <p>Terms of use</p>
@@ -12,15 +14,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p>Terms of use</p>
-          <p>Terms of use</p>
-          <p>Terms of use</p>
-          <p>Terms of use</p>
-          <p>Terms of use</p>
-          <p>Terms of use</p>
-        </div>
-        <div>
-          <p>Terms of use</p>
+          <p className="footer-text">Terms of use</p>
           <p>Terms of use</p>
           <p>Terms of use</p>
           <p>Terms of use</p>
@@ -28,7 +22,15 @@ const Footer = () => {
           <p>Terms of use</p>
         </div>
         <div>
+          <p className="footer-text">Terms of use</p>
           <p>Terms of use</p>
+          <p>Terms of use</p>
+          <p>Terms of use</p>
+          <p>Terms of use</p>
+          <p>Terms of use</p>
+        </div>
+        <div>
+          <p className="footer-text">Terms of use</p>
           <p>Terms of use</p>
           <p>Terms of use</p>
           <p>Terms of use</p>
@@ -38,7 +40,7 @@ const Footer = () => {
       </div>
 
 
-      <div className="w-[100%] p-6">
+      <div className="w-[100%] p-6 lg:border-l-2 border-black">
         <div>
         <p className="font-bold">SIGN UP AND GET 10% OFF</p>
     <p className="py-4">stay connected on time, subscribe to our newsletter and receive q0% off on your next order</p>
@@ -49,6 +51,22 @@ const Footer = () => {
     <button className="subscribe"> SUBSCRIBE</button>
 </div>
       </div>
+    </div>
+
+    <div className="border-t-2 flex items-center justify-between  border-black px-6 py-3">
+        @2023 ELLAMS GEORGE WORK
+    
+    <div className="flex gap-4">
+        <button className="footer-button">UNITED STATES</button>
+        <button className="footer-button">ENGLISH</button>
+
+    </div>
+    
+    </div>
+
+    <div className="border-t-2 font-bold border-black px-6 py-3">
+        @2023 ELLAMS GEORGE WORK
+    </div>
     </div>
   );
 };
