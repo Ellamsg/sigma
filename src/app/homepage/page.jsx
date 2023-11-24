@@ -52,7 +52,14 @@ const Homepage = () => {
      
 
       </div>
-      <Ads />
+      <div className="flex logos justify-between">
+            <img src="/images/gogs.svg" alt=""/>
+            <img src="/images/forbes.svg" alt=""/>
+            <img src="/images/infra.svg" alt=""/>
+            <img src="/images/etsy-logo-svgrepo-com.svg" alt=""/>
+            <img src="/images/sass.svg" alt=""/>
+        </div>
+      <Ads/>
       <div className="text-center p-3 border-t-2 border-b-2 border-black font-semibold">
         <p>BACK TO TOP</p>
       </div>

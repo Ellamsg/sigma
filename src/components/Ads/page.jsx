@@ -30,7 +30,7 @@ const Ads = () => {
       </div>
 
       <div className="w-[100%] border-black border-l-2">
-        <img className=" h-[100%]" src="/images/celine2.png" />
+        <img  className=" h-[100%] " src="/images/alex.jpeg" />
       </div>
       
     </div>

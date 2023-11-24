@@ -33,5 +33,10 @@
 
 .footer-button{
 
-  @apply  h-6 bg-transparent border-2 border-black p-3
+  @apply   h-6  border-2 border-black p-3
+}
+
+.logos img{
+
+  @apply h-9
 }

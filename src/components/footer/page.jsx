@@ -42,7 +42,7 @@ const Footer = () => {
 
       <div className="w-[100%] p-6 lg:border-l-2 border-black">
         <div>
-        <p className="font-bold">SIGN UP AND GET 10% OFF</p>
+        <p className="font-bold text-2xl">SIGN UP AND GET 10% OFF</p>
     <p className="py-4">stay connected on time, subscribe to our newsletter and receive q0% off on your next order</p>
 
         </div>
@@ -53,12 +53,15 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="border-t-2 flex items-center justify-between  border-black px-6 py-3">
-        @2023 ELLAMS GEORGE WORK
+    <div className="border-t-2  flex items-center justify-between  border-black px-6 py-3">
+       
+       <div className="">
+        <p> @2023 ELLAMS GEORGE WORK</p>
+        </div>
     
-    <div className="flex gap-4">
-        <button className="footer-button">UNITED STATES</button>
-        <button className="footer-button">ENGLISH</button>
+    <div className="flex gap-4 lg:w-[50%] justify-center lg:pl-6">
+        <button className="footer-button w-[60%]">UNITED STATES</button>
+        <button className="footer-button w-[40%]  ">ENGLISH</button>
 
     </div>
     
