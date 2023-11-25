@@ -38,12 +38,12 @@
 
 .logos img{
 
-  @apply h-9
+  @apply lg:h-9 h-5
 }
 
 .add-to-cart{
 
-  @apply bg-black h-6 text-white w-full
+  @apply bg-black h-7 text-white w-full
 }
 
 .colors{

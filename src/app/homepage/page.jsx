@@ -45,9 +45,9 @@ const Homepage = () => {
     
 
       <div className="relative">
-        <img className="w-full" src="/images/woman-coat.png" />
+        <img className="lg:w-full object-cover lg:h-auto h-[500px]" src="/images/woman-coat.png" />
         <div className=" absolute  flex justify-center left-0 right-0 items-center text-center  m-aut0 top-0 bottom-0 ">
-        <p className="text-6xl font-bold text-white ">KING SIGMA</p>
+        <p className="lg:text-6xl text-4xl font-bold text-white ">KING SIGMA</p>
         </div>
      
 
