@@ -1,7 +1,7 @@
 const Singleitems = () => {
   return (
     <div className="flex border-b-2 border-black">
-      <div className="h-[650px] w-[100%] border-r-2 border-black bg-white">
+      <div className="  w-[100%] border-r-2 border-black bg-white">
         <img className="h-full" src="/images/interlude.png" alt="" />
       </div>
 
@@ -10,7 +10,7 @@ const Singleitems = () => {
 
       <div className="  flex p-6 flex-col gap-3">
         <div className="title font-bold">GENESIS</div>
-        <div className="header text-2xl font-bold w-[29%] ">GENESIS BLACK 727 5D</div>
+        <div className="header text-[19px] font-bold w-[29%] ">GENESIS BLACK 727 5D</div>
         <div className="desc  font-medium">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
           voluptatum non a qui ducimus, sapiente commodi, necessitatibus
@@ -28,7 +28,7 @@ const Singleitems = () => {
         </div>
 
    <p className="">QUANTITY</p>
-        <div className="quantity border-2 border-spacing-3 flex items-center  h-6">
+        <div className="quantity border-2 border-spacing-3 flex items-center  h-[48px]">
           <button className="w-[20%] h-full text-3xl">-</button>
 
           <div className="w-[60%] border-r-2 border-l-2  flex items-center justify-center h-full text-center">
@@ -39,9 +39,18 @@ const Singleitems = () => {
 
         <button className="add-to-cart">ADD TO CART</button>
         <div className="">
-          <button className="h-6 text-white bg-black w-[35%] rounded-[10px]">PAY</button>
+          <button className="h-[48px] text-white bg-black w-[35%] rounded-[10px]">PAY</button>
         </div>
         <p>jkbfm,gknlkfhng bkm</p>
+        <div>
+   <p className="font-bold text-2xl">SPECIFICATIONS</p>
+
+   <p className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eum facere sint iure facilis sapiente,
+     soluta ut, qui eaque, harum id accusantium unde.
+     Perferendis, doloribus? Cumque sunt illo quisquam perspiciatis.</p>
+
+
+        </div>
       </div>
     </div>
     </div>

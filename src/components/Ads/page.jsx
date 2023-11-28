@@ -32,7 +32,7 @@ const Ads = () => {
 
 
       <div className="w-[100%] border-black lg:border-t-0 border-t-2  lg:border-l-2">
-        <img  className=" h-[100%] " src="/images/alex.jpeg" />
+        <img  className=" h-[100%] object-cover w-full " src="/images/alex.jpeg" />
       </div>
       
     </div>

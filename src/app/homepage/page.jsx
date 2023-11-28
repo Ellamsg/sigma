@@ -3,7 +3,7 @@ import Ads from "@/components/Ads/page";
 const Homepage = () => {
   return (
     <div className="">
-      <div className="flex">
+      <div className="flex border-b-2 border-black ">
         <div className="w-[50%] flex relative justify-center  bg-[white]">
           <img className="lg:h-[610px]  " src="/images/interlude.png" />
 
@@ -58,6 +58,10 @@ const Homepage = () => {
             <img src="/images/infra.svg" alt=""/>
             <img src="/images/etsy-logo-svgrepo-com.svg" alt=""/>
             <img src="/images/sass.svg" alt=""/>
+        </div>
+
+        <div className="border-t-2  border-black py-3 px-6">
+            <p>NEW ARRIVAL</p>
         </div>
       <Ads/>
       <div className="text-center p-3 border-t-2 border-b-2 border-black font-semibold">

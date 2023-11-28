@@ -43,7 +43,7 @@
 
 .add-to-cart{
 
-  @apply bg-black h-7 text-white w-full
+  @apply bg-black h-[48px] text-white w-full
 }
 
 .colors{
