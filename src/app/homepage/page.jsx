@@ -1,10 +1,36 @@
+"use client";
+
 import Ads from "@/components/Ads/page";
 import data from "@/components/data/data";
-
-
-
+import { client } from "../../../sanity/lib/client";
+import { useState, useEffect } from "react";
 
 const Homepage = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "post"] {
+        title,
+        overview,
+        slug,
+        _createdAt,
+        poster {
+          asset -> {
+            _id,
+            url
+          },
+          alt
+        }
+        
+        
+      }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <div className="">
       <div className="flex border-b-2 border-black ">
@@ -67,6 +93,14 @@ const Homepage = () => {
       <div className="border-t-2  border-black py-3 px-6">
         <p>NEW ARRIVAL</p>
       </div>
+
+      {posts.map((post) => (
+        <div className="border-[1px] border-black" key={post._id}>
+          <div className="bg-red">
+            <p>{post.title}</p>
+          </div>
+        </div>
+      ))}
 
       <div className=" grid grid-cols-4  ">
         {data.map((user) => (

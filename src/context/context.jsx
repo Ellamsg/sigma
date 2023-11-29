@@ -1,5 +1,7 @@
 "use client"
 
+ import { client } from "../../sanity/lib/client";
+
 import react from "react";
 
 
@@ -7,12 +9,30 @@ function ContextProvider({ children }) {
     const [allPhotos, setAllPhotos] = useState([]);
     const [cartItems, setCartItems] = useState([]);
   
-    const url = `https://fakestoreapi.com/products?limit=6`;
+   
     useEffect(() => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => setAllPhotos(data));
-    }, []);
+      client
+        .fetch(
+          `*[_type == "post"] {
+          title,
+          overview,
+          slug,
+          _createdAt,
+          poster {
+            asset -> {
+              _id,
+              url
+            },
+            alt
+          }
+          
+          
+        }`
+        )
+        .then((data) => setAllPhotos(data))
+        .catch(console.error)
+    }, [])
+
 
 
 //add items to cart
