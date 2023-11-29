@@ -8,44 +8,34 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-
-
 .banner {
-
-  @apply flex gap-3 ;
+  @apply flex gap-3;
 }
 
-.banner-btn{
-
+.banner-btn {
   @apply border-black border-[1.7px] px-7 py-[6px];
-
 }
 
 .subscribe {
- @apply bg-black h-6 text-white;
-
+  @apply bg-black h-6 text-white;
 }
 
-.footer-text{
-
-  @apply  font-bold uppercase pb-3
+.footer-text {
+  @apply font-bold uppercase pb-3;
 }
 
 .footer-button {
-
-  @apply   h-6  border-2 border-black p-3
+  @apply h-6  border-2 border-black p-3;
 }
 
-.logos img{
-
-  @apply lg:h-9 h-5
+.logos img {
+  @apply lg:h-9 h-5;
 }
 
-.add-to-cart{
-
-  @apply bg-black h-[48px] text-white w-full
+.add-to-cart {
+  @apply bg-black h-[48px] text-white w-full;
 }
 
-.colors{
-  @apply h-2 w-5
+.colors {
+  @apply h-2 w-5;
 }

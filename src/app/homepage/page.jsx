@@ -1,4 +1,8 @@
 import Ads from "@/components/Ads/page";
+import data from "@/components/data/data";
+
+
+
 
 const Homepage = () => {
   return (
@@ -22,7 +26,6 @@ const Homepage = () => {
             <button className="text-[12px] banner-btn">DISCOVER NOW</button>
           </div>
         </div>
-
       </div>
       <div className="font-semibold ">
         <div className="pl-4 py-3">
@@ -42,28 +45,39 @@ const Homepage = () => {
         </div>
       </div>
 
-    
-
       <div className="relative">
-        <img className="lg:w-full object-cover lg:h-auto h-[500px]" src="/images/woman-coat.png" />
+        <img
+          className="lg:w-full object-cover lg:h-auto h-[500px]"
+          src="/images/woman-coat.png"
+        />
         <div className=" absolute  flex justify-center left-0 right-0 items-center text-center  m-aut0 top-0 bottom-0 ">
-        <p className="lg:text-6xl text-4xl font-bold text-white ">KING SIGMA</p>
+          <p className="lg:text-6xl text-4xl font-bold text-white ">
+            KING SIGMA
+          </p>
         </div>
-     
-
       </div>
       <div className="flex logos justify-between">
-            <img src="/images/gogs.svg" alt=""/>
-            <img src="/images/forbes.svg" alt=""/>
-            <img src="/images/infra.svg" alt=""/>
-            <img src="/images/etsy-logo-svgrepo-com.svg" alt=""/>
-            <img src="/images/sass.svg" alt=""/>
-        </div>
+        <img src="/images/gogs.svg" alt="" />
+        <img src="/images/forbes.svg" alt="" />
+        <img src="/images/infra.svg" alt="" />
+        <img src="/images/etsy-logo-svgrepo-com.svg" alt="" />
+        <img src="/images/sass.svg" alt="" />
+      </div>
 
-        <div className="border-t-2  border-black py-3 px-6">
-            <p>NEW ARRIVAL</p>
-        </div>
-      <Ads/>
+      <div className="border-t-2  border-black py-3 px-6">
+        <p>NEW ARRIVAL</p>
+      </div>
+
+      <div className=" grid grid-cols-4  ">
+        {data.map((user) => (
+          <div className="border-[1px] border-black" key={user.id}>
+            <div className="bg-red">
+              <img className="" src={user.image} alt="user-img" />
+            </div>
+          </div>
+        ))}
+      </div>
+      <Ads />
       <div className="text-center p-3 border-t-2 border-b-2 border-black font-semibold">
         <p>BACK TO TOP</p>
       </div>
