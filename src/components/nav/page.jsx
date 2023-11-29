@@ -36,9 +36,9 @@ const Nav = () => {
 
   
         <div className="border-red-500 flex ">
-        <Link href="about"><p className="border-l px-5 py-2  border-black">SHOP</p></Link>
+        <Link href="/about"><p className="border-l px-5 py-2  border-black">SHOP</p></Link>
         <Link href="/"><p className="border-l px-5 py-2  border-black">SHOP</p></Link>
-        <Link href="singleitems"><p className="border-l px-5 py-2  border-black">SHOP</p></Link>
+        <Link href="/singleitems"><p className="border-l px-5 py-2  border-black">SHOP</p></Link>
           <p className="border-l px-5 py-2 border-black">SHOP</p>
         </div>
       </div>

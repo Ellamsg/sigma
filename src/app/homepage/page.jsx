@@ -1,9 +1,10 @@
 "use client";
 
 import Ads from "@/components/Ads/page";
-import data from "@/components/data/data";
+
 import { client } from "../../../sanity/lib/client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Homepage = () => {
   const [posts, setPosts] = useState([]);
@@ -93,24 +94,24 @@ const Homepage = () => {
       <div className="border-t-2  border-black py-3 px-6">
         <p>NEW ARRIVAL</p>
       </div>
+      <div className=" grid grid-cols-2 lg:grid-cols-4  ">
 
       {posts.map((post) => (
-        <div className="border-[1px] border-black" key={post._id}>
-          <div className="bg-red">
-            <p>{post.title}</p>
+        
+        <div className="border-[1px]  border-black" key={post._id}>
+          <div className=" relative h-[100%]">
+            <p className="absolute top-0">{post.title}</p>
+            <Link href={`/itemdetails/${post.slug.current}`}>
+            <img className="h-[100%]" src={post.poster.asset.url} alt="user-img" />
+            </Link>
           </div>
         </div>
+   
       ))}
 
-      <div className=" grid grid-cols-4  ">
-        {data.map((user) => (
-          <div className="border-[1px] border-black" key={user.id}>
-            <div className="bg-red">
-              <img className="" src={user.image} alt="user-img" />
-            </div>
-          </div>
-        ))}
-      </div>
+</div>
+      
+     
       <Ads />
       <div className="text-center p-3 border-t-2 border-b-2 border-black font-semibold">
         <p>BACK TO TOP</p>
