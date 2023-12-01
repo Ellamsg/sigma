@@ -4,6 +4,9 @@ import { client } from "../../../../sanity/lib/client";
 import { useParams } from "next/navigation";
 import { urlForImage } from "../../../../sanity/lib/image";
 import { useState, useEffect } from "react";
+import { ContextProvider } from "@/context/context";
+import { CartContext } from "@/context/context";
+import { useContext } from "react";
 
 const Singleitems = () => {
   const [singleposts, setSinglePosts] = useState({});
@@ -11,7 +14,8 @@ const Singleitems = () => {
   const { slug } = useParams();
 
 
-
+  
+  let { addToCart} = useContext(CartContext);
 
 
   useEffect(() => {
@@ -38,6 +42,12 @@ const Singleitems = () => {
 
     fetchData();
   }, [slug]);
+
+
+  function handleClick(singleposts){
+   console.log(singleposts)
+  addToCart(singleposts)
+  }
 
   return (
 
@@ -92,7 +102,7 @@ const Singleitems = () => {
             <button className="h-full w-[20%] text-3xl ">+</button>
           </div>
 
-          <button className="add-to-cart">ADD TO CART</button>
+          <button  onClick={() => handleClick(singleposts)} className="add-to-cart">ADD TO CART</button>
           <div className="">
             <button className="h-[48px] text-white bg-black w-[35%] rounded-[10px]">
               PAY

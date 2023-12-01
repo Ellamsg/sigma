@@ -10,38 +10,14 @@ import { CartContext } from "@/context/context";
 const Homepage = () => {
 
   let { addToCart} = useContext(CartContext);
- 
-  const [posts, setPosts] = useState([]);
+  let {posts} = useContext(CartContext);
 
-
-
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "post"] {
-        title,
-        overview,
-        slug,
-        _createdAt,
-        poster {
-          asset -> {
-            _id,
-            url
-          },
-          alt
-        }
-        
-        
-      }`
-      )
-      .then((data) => setPosts(data))
-      .catch(console.error);
-  }, []);
+  
 
 
   function handleClick(post){
     console.log(post)
- addToCart(post)
+    addToCart(post)
 
   }
 

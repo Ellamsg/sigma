@@ -30,7 +30,7 @@ const Nav = () => {
       <div className="border-black flex justify-between border-2">
 
         <div className="border-red-500 flex ">
-          <p className="px-5 py-2">KING SIGMA</p>
+         <Link href="/cartitems"><p className="px-5 py-2">KING SIGMA</p></Link> 
           <p className="border-l border-r px-5 py-2 border-black">SHOP</p>
         </div>
 
