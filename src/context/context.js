@@ -1,11 +1,20 @@
 "use client"
 
+import {  useContext,createContext } from "react";
  import { client } from "../../sanity/lib/client";
+import { useState,useEffect } from "react";
+import React from "react";
 
-import react from "react";
 
 
-function ContextProvider({ children }) {
+
+
+
+
+export const CartContext = createContext();
+
+
+ export function ContextProvider({ children }) {
     const [allPhotos, setAllPhotos] = useState([]);
     const [cartItems, setCartItems] = useState([]);
   
@@ -39,26 +48,27 @@ function ContextProvider({ children }) {
   function addToCart(newItem) {
     setCartItems((prevItems) => [...prevItems, newItem]);
   }
+  console.log(cartItems)
 
-  console.log(cartItems);
+  
 
 //remove items to cart
   function removeFromCart(id) {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
 
-  console.log(cartItems);
+
   return (
-    <Context.Provider
+    <CartContext.Provider
       value={{
      
         removeFromCart,
-        addToCart,
+        addToCart, cartItems
        
       }}
     >
       {children}
-    </Context.Provider>
+    </CartContext.Provider>
   );
 }
-  export { ContextProvider, Context };
+  

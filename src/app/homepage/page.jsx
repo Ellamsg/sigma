@@ -1,13 +1,19 @@
 "use client";
-
+import { useContext } from "react";
 import Ads from "@/components/Ads/page";
 
 import { client } from "../../../sanity/lib/client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { CartContext } from "@/context/context";
 const Homepage = () => {
+
+  let { addToCart} = useContext(CartContext);
+ 
   const [posts, setPosts] = useState([]);
+
+
 
   useEffect(() => {
     client
@@ -31,6 +37,13 @@ const Homepage = () => {
       .then((data) => setPosts(data))
       .catch(console.error);
   }, []);
+
+
+  function handleClick(post){
+    console.log(post)
+ addToCart(post)
+
+  }
 
   return (
     <div className="">
@@ -99,6 +112,11 @@ const Homepage = () => {
       {posts.map((post) => (
         
         <div className="border-[1px]  border-black" key={post._id}>
+          <button
+              onClick={() => handleClick(post)}
+                 >
+                  ADD TO CART
+                </button>
           <div className=" relative h-[100%]">
             <p className="absolute top-0">{post.title}</p>
             <Link href={`/itemdetails/${post.slug.current}`}>
