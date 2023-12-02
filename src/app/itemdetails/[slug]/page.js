@@ -13,10 +13,10 @@ const Singleitems = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
 
-
   
-  let { addToCart} = useContext(CartContext);
 
+  let { cartItems } = useContext(CartContext);
+  let { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -43,30 +43,28 @@ const Singleitems = () => {
     fetchData();
   }, [slug]);
 
-
-  function handleClick(singleposts){
-   console.log(singleposts)
-  addToCart(singleposts)
+  function handleClick(singleposts) {
+    console.log(singleposts);
+    addToCart(singleposts);
   }
 
   return (
-
-
     <div className="flex  h-[120vh]   border-b-2 border-black">
       <div className="w-[100%] w border-r-2 border-black ">
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-         
-            <div className=" w-[100%] h-[100%] ">
-              {/*check if data exist render or else no image */}
-              {singleposts.poster && singleposts.poster.asset ? (
-                <img className="h-[100%] w-[100%]" src={singleposts.poster.asset.url} />
-              ) : (
-                <p>No image available</p>
-              )}{" "}
-            </div>
-       
+          <div className=" w-[100%] h-[100%] ">
+            {/*check if data exist render or else no image */}
+            {singleposts.poster && singleposts.poster.asset ? (
+              <img
+                className="h-[100%] w-[100%]"
+                src={singleposts.poster.asset.url}
+              />
+            ) : (
+              <p>No image available</p>
+            )}{" "}
+          </div>
         )}
       </div>
 
@@ -102,7 +100,12 @@ const Singleitems = () => {
             <button className="h-full w-[20%] text-3xl ">+</button>
           </div>
 
-          <button  onClick={() => handleClick(singleposts)} className="add-to-cart">ADD TO CART</button>
+          <button
+            onClick={() => handleClick(singleposts)}
+            className="add-to-cart"
+          >
+            ADD TO CART
+          </button>
           <div className="">
             <button className="h-[48px] text-white bg-black w-[35%] rounded-[10px]">
               PAY

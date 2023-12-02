@@ -8,18 +8,14 @@ import Link from "next/link";
 
 import { CartContext } from "@/context/context";
 const Homepage = () => {
+  let { addToCart } = useContext(CartContext);
+  let { posts } = useContext(CartContext);
 
-  let { addToCart} = useContext(CartContext);
-  let {posts} = useContext(CartContext);
-
-  
-
-
-  function handleClick(post){
-    console.log(post)
-    addToCart(post)
-
+  function handleClick(post) {
+    console.log(post);
+    addToCart(post);
   }
+
 
   return (
     <div className="">
@@ -80,32 +76,28 @@ const Homepage = () => {
         <img src="/images/sass.svg" alt="" />
       </div>
 
+
       <div className="border-t-2  border-black py-3 px-6">
         <p>NEW ARRIVAL</p>
       </div>
       <div className=" grid grid-cols-2 lg:grid-cols-4  ">
-
-      {posts.map((post) => (
-        
-        <div className="border-[1px]  border-black" key={post._id}>
-          <button
-              onClick={() => handleClick(post)}
-                 >
-                  ADD TO CART
-                </button>
-          <div className=" relative h-[100%]">
-            <p className="absolute top-0">{post.title}</p>
-            <Link href={`/itemdetails/${post.slug.current}`}>
-            <img className="h-[100%]" src={post.poster.asset.url} alt="user-img" />
-            </Link>
+        {posts.map((post) => (
+          <div className="border-[1px] bg-red border-black" key={post._id}>
+            
+            <div className=" relative h-[100%]">
+              <p className="absolute top-0">{post.title}</p>
+              <Link href={`/itemdetails/${post.slug.current}`}>
+                <img
+                  className="h-[470px] w-[100%]"
+                  src={post.poster.asset.url}
+                  alt="user-img"
+                />
+              </Link>
+            </div>
           </div>
-        </div>
-   
-      ))}
+        ))}
+      </div>
 
-</div>
-      
-     
       <Ads />
       <div className="text-center p-3 border-t-2 border-b-2 border-black font-semibold">
         <p>BACK TO TOP</p>

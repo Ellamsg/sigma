@@ -10,6 +10,8 @@ export const CartContext = createContext();
 export function ContextProvider({ children }) {
   const [posts, setAllPosts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  
+ 
 
   useEffect(() => {
     client
@@ -25,8 +27,7 @@ export function ContextProvider({ children }) {
               url
             },
             alt
-          }
-          
+          } 
           
         }`
       )
@@ -34,13 +35,17 @@ export function ContextProvider({ children }) {
       .catch(console.error);
   }, []);
 
+
+ 
+
   //add items to cart, make a new(newItems) from the old array(prevItems, ...prev) taking all the items inside and create a new one.
   function addToCart(newItem) {
     //Take all the items that are currently in the shopping cart (prevItems), spread them out [...prevItems], and then add the new item (newItem) to
     // the end of the new array." Essentially, it's a way to create a new array with all the existing items plus the new item.
     setCartItems((prevItems) => [...prevItems, newItem]);
+
   }
-  
+
   console.log(cartItems);
 
   //remove items from cart
@@ -48,6 +53,7 @@ export function ContextProvider({ children }) {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
 
+  
   return (
     <CartContext.Provider
       value={{
