@@ -12,14 +12,15 @@ export function ContextProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   
  
-
   useEffect(() => {
     client
       .fetch(
-        `*[_type == "post"] {
+        `*[_type == "post" && (category == "womens collection" || category == "mens collection")] {
           title,
           overview,
           slug,
+          price,
+          category,
           _createdAt,
           poster {
             asset -> {
@@ -31,9 +32,13 @@ export function ContextProvider({ children }) {
           
         }`
       )
-      .then((data) => setAllPosts(data))
+      .then((data) => {
+        console.log("API Response:", data);
+        setAllPosts(data);
+      })
       .catch(console.error);
   }, []);
+
 
 
  
@@ -53,14 +58,15 @@ export function ContextProvider({ children }) {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
 
-  
+
   return (
     <CartContext.Provider
       value={{
         removeFromCart,
         addToCart,
         cartItems,
-        posts
+        posts,
+     
 
       }}
     >

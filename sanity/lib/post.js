@@ -9,9 +9,24 @@ export default {
         title: 'Title'
       },
       {
-        name: 'number',
+        name: 'serialnum',
         type: 'string',
-        title: 'number'
+        title: 'serialnum'
+      },
+      {
+        name: 'price',
+        type: 'number',
+        title: 'price'
+      },
+      {
+        name: 'category',
+        title: 'Category',
+        type: 'string',
+      
+        options: {
+          list: ['mens collection', 'womens collection'],
+          // You can add more categories as needed.
+        },
       },
 
       {

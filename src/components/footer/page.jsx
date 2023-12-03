@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <div className="flex lg:flex-row flex-col ">
+      <div className="flex lg:flex-row flex-col border-t-2 border-black ">
         <div className="flex lg:order-1 order-last  p-6 w-[100%]  lg:flex-row justify-between  ">
           <div className="">
             <p className="footer-text">Terms of use</p>

@@ -11,14 +11,14 @@ const Homepage = () => {
   let { addToCart } = useContext(CartContext);
   let { posts } = useContext(CartContext);
 
-  function handleClick(post) {
-    console.log(post);
-    addToCart(post);
-  }
+
+  //filter to get men or women items only. check api in context
+  const menPosts = posts.filter((post) => post.category === 'womens collection');
 
 
   return (
     <div className="">
+     
       <div className="flex border-b-2 border-black ">
         <div className="w-[50%] flex relative justify-center  bg-[white]">
           <img className="lg:h-[610px]  " src="/images/interlude.png" />
@@ -75,6 +75,22 @@ const Homepage = () => {
         <img src="/images/etsy-logo-svgrepo-com.svg" alt="" />
         <img src="/images/sass.svg" alt="" />
       </div>
+
+      <ul className="bg-red">
+        {menPosts.map((post) => (
+          <div key={post._id}>
+            <p>mannsns</p>
+            {post.title}
+            <p>{post.category
+}</p>
+            <p>{post.price}</p>
+            <Link href={`/itemdetails/${post.slug.current}`}>
+            <img src={post.poster.asset.url}/>
+            </Link>
+            </div>
+          
+        ))}
+      </ul>
 
 
       <div className="border-t-2  border-black py-3 px-6">
